@@ -1,0 +1,36 @@
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+       "oito     oito" 
+       "nove     onze"
+       "dez      doze";
+    font-size: 1.2rem;
+    color: var(--cor-principal);
+    background-color:  var(--cor-destaque);
+}
+#oito{
+    grid-area: oito;
+    font-size: 1.2rem;
+}
+
+#nove{
+    grid-area: nove;
+    font-size: 0.8rem;
+}
+
+#dez{
+    grid-area: dez;
+    font-size: 0.8rem;
+}
+
+#onze{
+    grid-area: onze;
+    font-size: 0.8rem;
+}
+
+#doze{
+    grid-area: doze;
+    font-size: 0.8rem;
+}

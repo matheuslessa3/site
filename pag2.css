@@ -1,0 +1,294 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    margin: 0;
+}
+
+:root {
+    --cor-destaque: rgba(11, 149, 134, 1);
+    --cor-principal: white;
+    --cor-contraste: hsl(0, 0%, 0%);
+    font-family: "Jomolhari", serif;
+    font-size: 14px;
+}
+
+.jomolhari-regular {
+    font-family: "Jomolhari", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.container > * {
+    padding:5px;
+    border-radius: 2px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    gap: 10px;
+    font-size: 1rem;
+
+}
+
+
+header{
+   /* position: -webkit-sticky; 
+    position: sticky;
+    top: 0;*/
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-areas:
+       "imagem1     titulo     titulo      titulo" ;
+    font-size: 1.3rem;
+    color: var(--cor-principal);
+    background-color:  var(--cor-destaque);
+}
+
+#imagem2{
+    margin: 0;
+}
+#imagem1{
+    width: 0px;
+    height: 170px;
+    margin:auto;
+    opacity:0.45;
+}
+
+#titulo{
+    width: 300px;
+    height: 70px;
+    text-align: justify;
+    grid-area: titulo;
+}
+
+#caminho{
+
+    font-size: 14px;
+}
+
+nav{
+    grid-area: nav;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "menu   .   .   .   ."
+    "tesouro    cdb    fundo    acoes    cripto";
+    font-size: 1.2rem;
+    color: var(--cor-principal);
+    background-color:  var(--cor-destaque);
+}
+
+#menu{
+    font-size: 1.2rem;
+    grid-area: menu;
+}
+#acoes{
+    font-size: 0.8rem;
+    grid-area: acoes;
+}
+#tesouro{
+    font-size: 0.8rem;
+    grid-area: tesouro;
+}
+#cdb{
+    font-size: 0.8rem;
+    grid-area: cdb;
+}
+#fundo{
+    font-size: 0.8rem;
+    grid-area: fundo;
+}
+
+#cripto{
+    font-size: 0.8rem;
+    grid-area: cripto;
+    color:rgba(14, 243, 169, 1)
+}
+/*-------------------------------------------------------------------------------------------------------*/
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+       "oito     oito" 
+       "nove     onze"
+       "dez      doze";
+    font-size: 1.2rem;
+    color: var(--cor-principal);
+    background-color:  var(--cor-destaque);
+}
+#oito{
+    grid-area: oito;
+    font-size: 1.2rem;
+}
+
+#nove{
+    grid-area: nove;
+    font-size: 0.8rem;
+}
+
+#dez{
+    grid-area: dez;
+    font-size: 0.8rem;
+}
+
+#onze{
+    grid-area: onze;
+    font-size: 0.8rem;
+}
+
+#doze{
+    grid-area: doze;
+    font-size: 0.8rem;
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+       "nome    nome    nome"
+       "cpf    cpf  cpf"
+       "datanascimento    datanascimento    datanascimento"
+       "conta   conta   conta"
+       "valor   valor   valor"
+       "meta    meta    meta"
+       "moeda   moeda   moeda"
+       "real    dolar   euro";
+}
+#nome{
+    margin: 10px;
+}
+
+#cpf{
+    margin: 10px;
+}
+
+#datanascimento{
+    margin: 10px;
+}
+
+#conta{
+    margin: 10px;
+}
+
+#valor{
+    margin: 10px;
+}
+
+#meta{
+    margin: 10px;
+}
+
+#moeda{
+    grid-area: moeda;
+    text-align: center;
+    color:rgba(14, 243, 169, 1);
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+aside{
+    grid-area: aside;
+    border: 2px solid var(--cor-destaque);
+}
+
+@media (min-width: 700px) {
+
+     nav{
+    grid-area: nav;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "menu   .   ."
+    "tesouro    cdb fundo"
+    "acoes  cripto  .";
+         }
+    .container {
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas:
+        "header    header"
+        "nav        nav"
+        "main      aside"
+        "footer    footer";
+    }
+    
+    
+    :root{
+      font-size: 18px;
+    }
+
+    #titulo{
+    width: 300px;
+    height: 70px;
+    margin: 30px;
+    margin-left:50px;
+    grid-area: titulo;
+}
+   
+    #imagem1{
+    width: 300px;
+    height: 170px;
+    margin: 15px;
+    grid-area: imagem1;
+    opacity:1;
+}  
+}
+/*---------------------------------------------------------------------*/
+
+@media (min-width: 1000px) {
+    .container {
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas:
+        "header header  header"
+        "nav    main    aside"
+        "footer footer  footer"
+     }
+
+    nav{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "menu"
+    "tesouro"
+    "cdb"
+    "fundo"
+    "acoes"
+    "cripto";
+}
+    
+     :root{
+      font-size: 20px;
+    }
+
+    #titulo{
+    width: 600px;
+    height: 70px;
+    margin: 30px;
+    grid-area: titulo;
+}
+
+    #imagem1{
+    width: 300px;
+    height: 170px;
+    margin: 15px;
+    grid-area: imagem1;
+}
+  }

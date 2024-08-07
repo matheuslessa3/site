@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    margin: 0;
+}
+
+:root {
+    --cor-destaque: rgba(11, 149, 134, 1);
+    --cor-principal: white;
+    --cor-contraste: hsl(0, 0%, 0%);
+    font-family: "Jomolhari", serif;
+    font-size: 14px;
+}
+
+.jomolhari-regular {
+    font-family: "Jomolhari", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.container > * {
+    padding:5px;
+    border-radius: 2px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    gap: 10px;
+    font-size: 1rem;
+
+}
+
+@media (min-width: 700px) {
+    .container {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+          "header    header"
+          "nav        nav"
+          "main      aside"
+          "footer    footer";
+      }
+      
+      
+      :root{
+        font-size: 18px;
+      }
+    }  
+
+@media (min-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+        "header header  header"
+        "nav    main    aside"
+        "footer footer  footer"
+             }
+            
+    :root{
+        font-size: 20px;
+            }
+        }
+    
